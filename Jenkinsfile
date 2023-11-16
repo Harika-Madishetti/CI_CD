@@ -27,9 +27,9 @@ pipeline {
             emailext (
                 subject: "email",
                 body: "Check the build log for details.",
-                to: 'harikamadishetti12@gmail.com',
-                debug: true
+                to: 'harikamadishetti12@gmail.com',                
             )
+            echo 'Email sent!'
         }
     }
 }
