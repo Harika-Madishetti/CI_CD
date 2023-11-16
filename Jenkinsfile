@@ -22,4 +22,13 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            emailext (
+                subject: "email",
+                body: "Check the build log for details.",
+                to: 'harikamadishetti12@gmail.com'
+            )
+        }
+    }
 }
