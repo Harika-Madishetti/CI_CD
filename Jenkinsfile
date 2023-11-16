@@ -21,5 +21,12 @@ pipeline {
                 }
             }
         }
+        stage('deploy') {
+            steps {
+                script {
+                    sh 'npm start'
+                }
+            }
+        }
     }
 }
