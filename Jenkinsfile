@@ -14,5 +14,12 @@ pipeline {
                 }
             }
         }
+        stage("Test"){
+            steps{
+                script {
+                  sh './jenkins_script/test.sh'  
+                }
+            }
+        }
     }
 }
