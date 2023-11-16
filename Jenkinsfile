@@ -23,8 +23,8 @@ pipeline {
         }
     }
     post {
-        failure {
-            echo 'Build failed! Sending email notification...'
+        always {
+            echo 'Test! Sending email notification...'
             emailext subject: 'Build Failed: ${currentBuild.fullDisplayName}',
                       body: 'The build has failed. Please investigate the issue.',
                       to: 'harikamadishetti12@gmail.com', 
