@@ -1,10 +1,5 @@
 pipeline {
     agent any
-
-    tools {
-        nodejs 'nodejs'
-    }
-
     stages {
         stage('Build') {
             steps {
@@ -18,13 +13,6 @@ pipeline {
             steps {
                 script {
                     sh 'npm test'
-                }
-            }
-        }
-        stage('deploy') {
-            steps {
-                script {
-                    sh 'npm start'
                 }
             }
         }
